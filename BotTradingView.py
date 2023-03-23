@@ -1,27 +1,21 @@
-#SERVICIO LOG IN
-
-#LOG IN TRADING VIEW
-
-
 from selenium import webdriver
-import time
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.service import Service
+import time
+import org.openga.selenium.support.ui.select
 
-user= "xxxxx"
-pas="xxxx"
-
-driver= webdriver.Chrome()
+driver= webdriver.Chrome('C:/Users/Alejandro/Documents/Programas/WebdriverChrome/chromedriver_win32/chromedriver.exe')
 driver.get('https://es.tradingview.com/')
-time.sleep(10)
 
+time.sleep(15)
 
-driver.find_element(By.XPATH,'//*[@id="one-tap-signin-container"]').click()
+# driver.send_keys(Keys.TAB)
+# user= driver.find_element(By.NAME, "username")
+# password= driver.find_element(By.NAME, 'password')
 
-#obj= driver.find_element(By.XPATH,'//*[@id="email-signin__user-name-input__a5b4d798-c74f-439d-95d1-a9167f5e7e02"]')
-#obj.send_keys(user)
-#obj= driver.find_element_by_xpath('//*[@id="email-signin__password-input__a5b4d798-c74f-439d-95d1-a9167f5e7e02"]')
-#obj.send_keys(pas)
+# user.send_keys('alejandro')
+# password.send_keys('123')
+# password.send_keys(Keys.RETURN)
 
-#driver.find_element_by_xpath('//*[@id="email-signin__submit-button__a5b4d798-c74f-439d-95d1-a9167f5e7e02"]/span[2]').click()
-
+time.sleep(5)
+driver.quit()
